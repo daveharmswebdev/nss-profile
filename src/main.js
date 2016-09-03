@@ -1,6 +1,6 @@
 'use strict'
 
-require('angular')
+const angular= require('angular')
 require('angular-route')
 
 let app = angular.module('profile', ['ngRoute'])
