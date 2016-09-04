@@ -1,9 +1,26 @@
-<div ng-controller="navController">
-  <nav>
-   <div>
-     <ul ng-repeat="item in navItems">
-       <li><a href="{{item.url}}">{{item.name}}</a></li>
-     </ul>
-   </div>
- </nav>
-</div>
+<!-- <nav ng-controller="navController">
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">Logo</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down" ng-repeat="item in navItems">
+    </ul>
+
+    <ul id="nav-mobile" class="side-nav">
+      <li><a href="#">Navbar Link</a></li>
+    </ul>
+    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+  </div>
+</nav> -->
+
+<nav role="navigation" ng-controller="navController">
+  <div class="nav-wrapper container">
+    <a id="logo-container" href="#" class="brand-logo">Logo</a>
+    <ul class="right hide-on-med-and-down" ng-repeat="item in navItems">
+      <li><a href="{{item.url}}">{{item.name}}</a></li>
+    </ul>
+
+    <ul id="nav-mobile" class="side-nav" ng-repeat="item in navItems">
+      <li><a href="{{item.url}}">{{item.name}}</a></li>
+    </ul>
+    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+  </div>
+</nav>
