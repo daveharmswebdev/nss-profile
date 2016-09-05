@@ -18,6 +18,7 @@
   "homepage": "https://github.com/daveharmswebdev/nss-profile#readme",
   "devDependencies": {
     "browserify": "^13.1.0",
+    "browserify-shim": "^3.8.12",
     "gulp": "^3.9.1",
     "gulp-jshint": "^2.0.1",
     "gulp-sass": "^2.3.2",
@@ -32,6 +33,30 @@
   },
   "dependencies": {
     "angular": "^1.5.8",
-    "angular-route": "^1.5.8"
+    "angular-route": "^1.5.8",
+    "jquery": "^3.1.0",
+    "materialize": "^1.0.0",
+    "materialize-css": "^0.97.7",
+    "materialize-js": "^1.0.0"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browser": {
+    "angular": "./node_modules/angular/angular.min.js",
+    "jquery": "./node_modules/jquery/dist/jquery.min.js",
+    "materialize-js": "./node_modules/materialize-css/bin/materialize.js"
+  },
+  "browserify-shim": {
+    "angular": "angular",
+    "jquery": "$",
+    "materialize-js": {
+      "exports": "Materialize",
+      "depends": [
+        "jquery:jQuery"
+      ]
+    }
   }
 }

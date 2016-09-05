@@ -1,6 +1,11 @@
 'use strict'
 
-module.exports = function($scope) {
+const initilaize = require('./init')
+
+module.exports = function($scope, initilaize) {
+
+const init = initilaize()
+
 	$scope.navItems=[
 		{
       name: "About",
